@@ -49,7 +49,7 @@
 							</header>
 							<div class="align-center">
 								<p> This project combined both high downforce with low drag to give us an aero package that wouldn't drain our pack. 
-The flap is a robust, stable mechanism driven by a position controlled motor. According to the math, the drag reduction system saves an entire lap's worth of energy in a 16 lap race. Details are a little sparse because I am currently trying to patent this idea and bring it to market with help from a business partner</p>
+In a 16 lap race, we save an entire lap's worth of energy by using low-drag on the straights where cornering grip isn't needed</p>
 							</div>
 						</div>
 					</div>
@@ -85,11 +85,10 @@ system was proven to save energy. </p>
 							
 							</header>
 							<div class="align-center">
-							<p> The position controller for the motor was built from scratch using an ARM cortex M4 processor controlling a TI H bridge driver 
-while reading position feedback from a PWM absolute rotary encoder. The code was written in C, and features a PID loop for position control. The motor board interfaces with the control system over CAN, where a paddle is pulled to activate the DRS system. The state machine in the motor board will switch from a hold state to a transition, and move at full power to the 
-low drag position. Once it passes a threshold, it move to the hold-low state and the PID is active.</p> 
-									<img style="height:300px"src="images/aeroBoard.jpg"></img>
-
+								<img style="height:300px"src="images/aeroBoard.jpg"></img>
+								<p> The position controller for the motor was built from scratch using an ARM cortex M4 processor controlling a TI H bridge driver 
+while reading position feedback from a PWM absolute rotary encoder. The code was written in C, and features a PID loop for position control. The motor board interfaces with the control system over CAN, where a paddle is pulled to activate the DRS system.
+								</p> 
 							</div>
 						</div>
 					</div>
@@ -125,7 +124,8 @@ stable! </p>
 							<br>
 							<div class="align-center">
 								<p> The rockers have a cool, alien look because they were developed using topology optimization software. I have learned
-how to use FEA software, and this takes the design to the next level by iteratively removing unstressed material in the design space. The end result is a structure 70% of the weight and over twice as strong!</p>
+how to use FEA software, and this takes the design to the next level by iteratively removing unstressed material in the design space. The end result is a structure 70% of the weight and over twice as strong!
+								</p>
 								<img style="height:300px" src="images/RockerFEA.PNG"></img>
 
 							</div>
