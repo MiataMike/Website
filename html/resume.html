@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+
+
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      } 
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+}
+</script>
+
+<html>
+	<head>
+		<title>Michael Turner</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Michael Turner</a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="design.html">Design</a></li>
+					<li><a href="resume.html">Resume</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<br><br>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="ninjaMobile">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+							</header>
+							<p>
+							<div class="align-center" style="position: relative; left:50%; transform: translateX(-50%);width:600px">
+								<div class="ninjaMobile" w3-include-html="Resume-Mobile.html"></div>
+							</div>
+							</p>
+						</div>
+					</div>
+				</div>
+				</div>
+			</section>
+			<div class="ninjaDesk" w3-include-html="Resume-Mobile.html" style="padding:2%"></div>>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="https://twitter.com/EeMichaelturner" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                                                <li><a href="https://www.facebook.com/TurnerTheRed" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                                                <li><a href="https://www.instagram.com/turnerthered/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                                                <li><a href="mailto:mwtvy4@mst.edu" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Michael Turner. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+<script>
+includeHTML();
+</script>

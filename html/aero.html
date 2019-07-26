@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Michael Turner</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Michael Turner</a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="design.html">Design</a></li>
+					<li><a href="resume.html">Resume</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>no compromises</p>
+						<h2>Active Aerodynamics</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<h2>Overview</h2>
+								<img src="images/wing.jpg"></img>
+							</header>
+							<div class="align-center">
+								<p> This project combined both high downforce with low drag to give us an aero package that wouldn't drain our pack. 
+The flap is a robust, stable mechanism driven by a position controlled motor. According to the math, the drag reduction system saves an entire lap's worth of energy in a 16 lap race. Details are a little sparse because I am currently trying to patent this idea and bring it to market with help from a business partner</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<h2>The Story</h2>
+							</header>
+							<div class="align-center">
+								<p> We knew from our homebrew modeling software, Car2D, that wings would add significant grip during cornering and lower 
+lap times, but we didn't have the manpower to build a full kit. Our sister combustion FSAE team kindly let us use their front wing and undertray design,
+ but left us to make a rear wing. To balance the forces, we needed a large wing, but couldn'd afford all that added drag energy with our current battery pack. I used some simple design tools to 
+show that a DRS would save significant energy before going back and proving it with ANSYS Fluend CFD. (If things sound vague here, sorry. I'm trying to protect my intellectual property)
+ I had an idea of how the mechanism should work, so I made basic aerodynamic assumptions and wrote a Python script to calculate the forces involed in all the linkages, including the motor. After the 
+proof of concept passed, I used the CFD simulations to validate my assumptions and plug simulation data into the Python script. This script was iterated over millions of times to find the 
+optimal design. After the system was designed and built, coastdown testing was done to validate the numbers predicted by the model. While there was lots of variance to the results, the 
+system was proven to save energy. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<h2>Electronics</h2>								
+							
+							</header>
+							<div class="align-center">
+							<p> The position controller for the motor was built from scratch using an ARM cortex M4 processor controlling a TI H bridge driver 
+while reading position feedback from a PWM absolute rotary encoder. The code was written in C, and features a PID loop for position control. The motor board interfaces with the control system over CAN, where a paddle is pulled to activate the DRS system. The state machine in the motor board will switch from a hold state to a transition, and move at full power to the 
+low drag position. Once it passes a threshold, it move to the hold-low state and the PID is active.</p> 
+									<img style="height:300px"src="images/aeroBoard.jpg"></img>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<h2>The Mechanism</h2>
+							</header>
+							<div class="align-center">
+								<p> The mechanism is based on the classic 4-bar mechanism. Our team advisor, Dr Hutcheson, teaches the class on these, so 
+even though I am not trained to be a mechanical engineer, I was able to pick up the information I needed. The two elements are linked together by a pair of 4 bar mechanisms, which are 
+designed to be in specific operating points at the same time: Low drag and High downforce modes. These are driven by a single crank attached to the underside of the main element. It 
+operates at the stable points at the top and bottom of its throw, making the PID's job easier. Part of the clever design is that the forces from the airfoils make both operating points 
+stable! </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<h2>The Rockers</h2>
+							</header>
+							<div class="image fit">
+							</div>
+							<br>
+							<div class="align-center">
+								<p> The rockers have a cool, alien look because they were developed using topology optimization software. I have learned
+how to use FEA software, and this takes the design to the next level by iteratively removing unstressed material in the design space. The end result is a structure 70% of the weight and over twice as strong!</p>
+								<img style="height:300px" src="images/RockerFEA.PNG"></img>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="https://twitter.com/EeMichaelturner" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                                                <li><a href="https://www.facebook.com/TurnerTheRed" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                                                <li><a href="https://www.instagram.com/turnerthered/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                                                <li><a href="mailto:mwtvy4@mst.edu" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Michael Turner. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

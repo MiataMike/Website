@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Michael Turner</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Michael Turner</a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="design.html">Design</a></li>
+					<li><a href="resume.html">Resume</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>cutting through the noise</p>
+						<h2>Dyno Data Aquisition</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<h2>Overview</h2>
+							</header>
+							<div class="image fit">
+                                                        <a href="images/Dyno.jpg"><img src="images/Dyno.jpg"></img></a>
+							<br>
+							<p> This project is about making a motor dynomometer test bench. This has been a long term goal of the team because it gives us a powerful 
+platform to test our car's powertrain with hardware in the loop (HIL). The DynoDAQ board will be able to control both the speed of the dyno and the torque output of the test article, 
+meaning we can run detailed, repeatable test cycles. Planned tests include: Torque controller PID tuning, Driving style efficiency testing, and power output maximization testing.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<h2>The DAQ</h2>
+							</header>
+							<div class="image fit">
+                                                        <a href="images/DynoDAQ.jpg"><img src="images/DynoDAQ.jpg"></img></a>
+							<br>
+							<p> This board will operate near two motorcontrollers, which are known to create lots of electrial switching noise, so precautions 
+were taken to prevent EMI. The board is a 4 layer stackup, with a ground plane completely isolating the analog inputs from the digital side of the board. All wires used are shielded, with
+the shields grounded to the metal enclosure, which is connected directly to the ground plane of the motor drive. All inputs are filtered and all digital chips are decoupled to keep the 
+power rails quiet. To filter the input signal as close to the chip as possible, 0201 package components were used to fit inbetween the chip's legs.  
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="https://twitter.com/EeMichaelturner" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                                                <li><a href="https://www.facebook.com/TurnerTheRed" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                                                <li><a href="https://www.instagram.com/turnerthered/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                                                <li><a href="mailto:mwtvy4@mst.edu" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Michael Turner. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
