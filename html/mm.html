@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Michael Turner</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Michael Turner</a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="design.html">Design</a></li>
+					<li><a href="resume.html">Resume</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>fully automated money risking platform</p>
+						<h2>MoneyMonster</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<h2>Overview</h2>
+							</header>
+							<div class="image fit">
+                                                        <a href="images/Dyno.jpg"><img src="images/Dyno.jpg"></img></a>
+							<br>
+							<p> I started this project because I wanted a hard AI problem to chase. Recognizing written digits isn't nearly as
+							cool as making cash. The MoneyMonster is an unsupervised learning based AI which creates a list of trades based 
+							off historical price data, TA indicators and an original, scriptable trading strategy. It runs on a Jetson Nano
+							dev kit (which is also hosting this site) for GPU accelerated Keras inferencing in a Linux environment.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="three" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<h2>Performance</h2>
+							</header>
+							<div class="image fit">
+                                                        <a href="images/portfolio.PNG"><img src="images/portfolio.PNG"></img></a>
+							<br>Pretty good! I lost nearly $10,000 immediately, but have recovered nicely. This chart shows performance as of 8/9/19				
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<h2>Data Collection</h2>
+							</header>
+							<div class="image fit">
+                                                        <a href="images/DynoDAQ.jpg"><img src="images/DynoDAQ.jpg"></img></a>
+							<br>
+							<p> The MoneyMonster generates its own tagged dataset by looking back at daily price data. Its output is the price
+							prediction 1 week in the future, which we can find easily for days at least 1 week in the past. I scheduled a 
+							script to pull new data from the S&P500 every friday at close to update the training of the neural net.</p>
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section id="algo" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<h2>The Algo</h2>
+							</header>
+							<div class="image fit">
+                                                        <a href="images/DynoDAQ.jpg"><img src="images/DynoDAQ.jpg"></img></a>
+							<br>
+							<p>The instruments I'm using are Options, which according to the Nobel Prize for Economics in 1976, can be modeled
+							by the Black-Scholes equation*. One variable that affects the price at a given time is the probability distribution
+							of the stock. By taking this market-determined probability and finding the expected value of the options at 
+							expiration, I've found a strategy that should reliably win in the long run. It theoretically works with completely 
+							random stock picks, but by adding on edcuated guesses from AI, the odds should be in our favor.
+							</p>
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="https://twitter.com/EeMichaelturner" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                                                <li><a href="https://www.facebook.com/TurnerTheRed" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                                                <li><a href="https://www.instagram.com/turnerthered/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                                                <li><a href="mailto:mwtvy4@mst.edu" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					&copy; Michael Turner. All rights reserved.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
