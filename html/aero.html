@@ -39,7 +39,7 @@
 			</section>
 
 		<!-- Two -->
-			<section id="two" class="wrapper style2">
+			<section id="wing" class="wrapper style2">
 				<div class="inner">
 					<div class="box">
 						<div class="content">
@@ -57,28 +57,8 @@
 					</div>
 				</div>
 			</section>
-			<section id="two" class="wrapper style2">
-				<div class="inner">
-					<div class="box">
-						<div class="content">
-							<header class="align-center">
-								<h2>The Story</h2>
-							</header>
-							<div class="align-center">
-								<p> We knew from our homebrew modeling software, Car2D, that wings would add significant grip during cornering and lower 
-lap times, but we didn't have the manpower to build a full kit. Our sister combustion FSAE team kindly let us use their front wing and undertray design,
- but left us to make a rear wing. To balance the forces, we needed a large wing, but couldn'd afford all that added drag energy with our current battery pack. I used some simple design tools to 
-show that a DRS would save significant energy before going back and proving it with ANSYS Fluend CFD. (If things sound vague here, sorry. I'm trying to protect my intellectual property)
- I had an idea of how the mechanism should work, so I made basic aerodynamic assumptions and wrote a Python script to calculate the forces involed in all the linkages, including the motor. After the 
-proof of concept passed, I used the CFD simulations to validate my assumptions and plug simulation data into the Python script. This script was iterated over millions of times to find the 
-optimal design. After the system was designed and built, coastdown testing was done to validate the numbers predicted by the model. While there was lots of variance to the results, the 
-system was proven to save energy. </p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="two" class="wrapper style2">
+
+			<section id="electronics" class="wrapper style2">
 				<div class="inner">
 					<div class="box">
 						<div class="content">
@@ -89,33 +69,38 @@ system was proven to save energy. </p>
 							<div class="image fit">
 								<img src="images/aeroBoard.jpg"></img>
 								<hr>
-								<p> The position controller for the motor was built from scratch using an ARM cortex M4 processor controlling a TI H bridge driver 
-while reading position feedback from a PWM absolute rotary encoder. The code was written in C, and features a PID loop for position control. The motor board interfaces with the control system over CAN, where a paddle is pulled to activate the DRS system.
+								<p> I built the position controller for the motor from scratch using an ARM cortex M4 processor controlling a
+									TI H-bridge driver while reading position feedback from a PWM absolute rotary encoder. The code was written in C,
+									and features a PID loop for position control. The motor board interfaces with the control system over CAN, where 
+									a paddle is pulled to activate the DRS system.
 								</p> 
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section id="two" class="wrapper style2">
+			
+			<section id="mechanism" class="wrapper style2">
 				<div class="inner">
 					<div class="box">
 						<div class="content">
 							<header class="align-center">
 								<h2>The Mechanism</h2>
 							</header>
-							<div class="align-center">
-								<p> The mechanism is based on the classic 4-bar mechanism. Our team advisor, Dr Hutcheson, teaches the class on these, so 
-even though I am not trained to be a mechanical engineer, I was able to pick up the information I needed. The two elements are linked together by a pair of 4 bar mechanisms, which are 
-designed to be in specific operating points at the same time: Low drag and High downforce modes. These are driven by a single crank attached to the underside of the main element. It 
-operates at the stable points at the top and bottom of its throw, making the PID's job easier. Part of the clever design is that the forces from the airfoils make both operating points 
-stable! </p>
+							<div class="image fit">
+							<img src="images/mechanism.gif"></img>
+							<hr>
+								<p> The mechanism is based on the classic 4-bar (thanks Dr. Hutcheson!). Both elements are driven by the middle rocker.
+								I wrote a Python simulation/optimizer to calculate the forces, and designed the mechanism to minimize driving force. Part of the
+								clever design is that the forces from the airfoils cancel to make <b>both</b> operating points stable! 
+								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section id="two" class="wrapper style2">
+			
+			<section id="rockers" class="wrapper style2">
 				<div class="inner">
 					<div class="box">
 						<div class="content">
@@ -124,10 +109,11 @@ stable! </p>
 							</header>
 							<br>
 							<div class="image fit">
-								<img style="height:300px" src="images/RockerFEA.PNG"></img>
+								<img src="images/RockerFEA.PNG"></img>
 								<hr>
-								<p> The rockers have a cool, alien look because they were developed using topology optimization software. I have learned
-how to use FEA software, and this takes the design to the next level by iteratively removing unstressed material in the design space. The end result is a structure 70% of the weight and over twice as strong!
+								<p> The rockers have a cool, alien look because they were developed using topology optimization. I have
+								learned how to use ANSYS FEA software, and this takes the design to the next level by iteratively removing unstressed 
+								material in the design space. The end result is a structure 70% of the weight and over twice as strong!
 								</p>
 
 							</div>
