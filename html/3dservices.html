@@ -4,41 +4,9 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
-
-
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      } 
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-}
-</script>
-
 <html>
 	<head>
-		<title>Michael Turner's Resume</title>
+		<title>3D</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -72,30 +40,34 @@ function includeHTML() {
 			<section id="One" class="wrapper style3">
 				<div class="inner">
 					<header class="align-center">
-						<br><br>
+						<h2>3D printing</h2>
 					</header>
 				</div>
 			</section>
 
-		<!-- Two -->
-			<section id="two" class="wrapper style2">
-				<div class="ninjaMobile">
-				<div class="inner">
-					<div class="box">
-						<div class="content">
-							<header class="align-center">
-							</header>
-							<p>
-							<div class="align-center" style="position: relative; left:50%; transform: translateX(-50%);width:600px">
-								<div class="ninjaMobile" w3-include-html="Resume-Mobile.html"></div>
-							</div>
-							</p>
+
+  
+						
+						
+                        <section id="three" class="wrapper style2">
+                                <div class="inner">
+									<div class="content">
+                                        <header class="align-center">
+                                                <p class="special">Click a picture for the nitty gritty details</p>
+                                        </header>
+                                        <div class="gallery">
+                                                <div>
+							<h3 style="text-align: center; margin-bottom: 0px;">Under construction, email me and I'll print your STL</h3>
+                                                     	<div class="image fit">
+                                                                <a href="3dservices.html"><img src="images/BenchyFleet1.jpg" alt="" /></a>
+                                                        </div>
+                                                </div>
+
+                                              
 						</div>
-					</div>
-				</div>
-				</div>
-			</section>
-			<div class="ninjaDesk" w3-include-html="Resume-Mobile.html" style="padding:2%"></div>>
+                                        </div>
+                                </div>
+                        </section>
 
 
 		<!-- Footer -->
@@ -113,6 +85,7 @@ function includeHTML() {
 				</div>
 			</footer>
 
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -122,6 +95,3 @@ function includeHTML() {
 
 	</body>
 </html>
-<script>
-includeHTML();
-</script>
