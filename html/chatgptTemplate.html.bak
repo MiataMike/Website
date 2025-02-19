@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Engine Rebuild Journey - Michael Turner</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N59452KPFK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N59452KPFK');
+    </script>
+</head>
+<body class="subpage">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="logo"><a href="index.html">Michael Turner</a></div>
+        <a href="#menu">Menu</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a href="resume.html">Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <section id="One" class="wrapper style3">
+        <div class="inner">
+            <header class="align-center">
+                <p>Restoring Performance</p>
+                <h2>Engine Rebuild Journey</h2>
+            </header>
+        </div>
+    </section>
+
+    <!-- Project Goal Section -->
+    <section id="project-goal" class="wrapper style2">
+        <div class="inner">
+            <div class="box">
+                <div class="content">
+                    <header class="align-center">
+                        <h2>Project Goal</h2>
+                    </header>
+                    <div class="image fit">
+                        <img src="https://via.placeholder.com/800x400" alt="Engine Rebuild">
+                        <hr>
+                        <p>The objective of this project was to restore the engine's performance and reliability by replacing critical components and enhancing its aesthetic appeal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Head Bolts Replacement Section -->
+    <section id="head-bolts" class="wrapper style2">
+        <div class="inner">
+            <div class="box">
+                <div class="content">
+                    <header class="align-center">
+                        <h2>Head Bolts Replacement</h2>
+                    </header>
+                    <div class="image fit">
+                        <img src="https://via.placeholder.com/800x400" alt="ARP Head Bolt Kit">
+                        <hr>
+                        <p>During the disassembly, I discovered that the existing head bolts were torque-to-yield (TTY) types, which are designed for single use and must be replaced after removal. To ensure optimal engine performance and durability, I decided to replace them with high-quality ARP head bolts. This required ordering the new bolts and waiting for their arrival, which took about a day.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valve Cover Repainting Section -->
+    <section id="valve-covers" class="wrapper style2">
+        <div class="inner">
+            <div class="box">
+                <div class="content">
+                    <header class="align-center">
+                        <h2>Valve Cover Repainting</h2>
+                    </header>
+                    <div class="image fit">
+                        <img src="https://via.placeholder.com/800x400" alt="Valve Cover Before and After">
+                        <hr>
+                        <p>While awaiting the arrival of the new head bolts, I took the opportunity to enhance the engine's appearance by repainting the valve covers. The original covers had become worn and discolored over time. After thorough cleaning and preparation, I applied a fresh coat of high-temperature engine enamel, resulting in a revitalized look. Below is a side-by-side comparison of the valve covers before and after repainting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <ul class="icons">
+                <li><a href="https://twitter.com/EeMichaelturner" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="https://www.facebook.com/TurnerTheRed" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/turnerthered/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="mailto:webmaster@michael-turner.ee" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            &copy; Michael Turner. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

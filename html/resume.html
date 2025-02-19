@@ -1,41 +1,9 @@
 <!DOCTYPE HTML>
 <!--
-	Hielo by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+    Hielo by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
-
-
-<script>
-function includeHTML() {
-  var z, i, elmnt, file, xhttp;
-  /*loop through a collection of all HTML elements:*/
-  z = document.getElementsByTagName("*");
-  for (i = 0; i < z.length; i++) {
-    elmnt = z[i];
-    /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("w3-include-html");
-    if (file) {
-      /*make an HTTP request using the attribute value as the file name:*/
-      xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-          /*remove the attribute, and call this function once more:*/
-          elmnt.removeAttribute("w3-include-html");
-          includeHTML();
-        }
-      } 
-      xhttp.open("GET", file, true);
-      xhttp.send();
-      /*exit the function:*/
-      return;
-    }
-  }
-}
-</script>
-
 <html>
 	<head>
 		<title>Michael Turner's Resume</title>
@@ -48,7 +16,6 @@ function includeHTML() {
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-N59452KPFK');
 </script>
 	</head>
@@ -72,40 +39,69 @@ function includeHTML() {
 			<section id="One" class="wrapper style3">
 				<div class="inner">
 					<header class="align-center">
-						<br><br>
+						<h2>Resume</h2>
 					</header>
 				</div>
 			</section>
 
 		<!-- Two -->
 			<section id="two" class="wrapper style2">
-				<div class="ninjaMobile">
 				<div class="inner">
 					<div class="box">
 						<div class="content">
 							<header class="align-center">
+								<h2>Michael Turner</h2>
+								<p>Electrical Engineer | Optical Systems | Embedded Design</p>
 							</header>
 							<p>
-							<div class="align-center" style="position: relative; left:50%; transform: translateX(-50%);width:600px">
-								<div class="ninjaMobile" w3-include-html="Resume-Mobile.html"></div>
-							</div>
+								<strong>Contact:</strong>San Diego CA | (913) 484-6894 | 
+								<a href="mailto:me@Michael-Turner.ee">me@Michael-Turner.ee</a> | 
+								<a href="http://Michael-Turner.ee">Michael-Turner.ee</a>
+							</p>
+							<h3>Experience</h3>
+							<p><strong>Sensing System Engineer, Apple Inc.</strong> (July 2023 – Present)</p>
+							<ul>
+								<li>DRI responsible for optical measurement system, correcting errors in MP factory line.</li>
+								<li>Monitored factory data during mass production, detected issues, and escalated fixes.</li>
+								<li>Built robotic system for module characterization and validated performance against spec.</li>
+								<li>Set up data pipelines using Python and MATLAB for data collection and analysis.</li>
+							</ul>
+							<p><strong>Senior Electrical Contractor, Turner Electronic Solutions</strong> (Jan 2023 – July 2023)</p>
+							<ul>
+								<li>Designed and revised PCBs, optimizing detector performance.</li>
+								<li>Developed UI display for a wearable optical sensor.</li>
+							</ul>
+							<h3>Education</h3>
+							<p><strong>B.Sc. Electrical Engineering</strong>, Missouri University of Science and Technology (Dec 2018)</p>
+							<p>Graduated with honors.</p>
+							<p><strong>Chief Electrical Engineer, MST Formula SAE Electric</strong> (2017-2018)</p>
+							<ul>
+								<li>Strategic project planning for electrical subgroup.</li>
+								<li>Designed drag reduction system (CFD, FEA, C++, CAN).</li>
+							</ul>
+							<h3>Skills</h3>
+							<ul>
+								<li>Embedded Systems & PCB Design</li>
+								<li>Optical System Engineering</li>
+								<li>Python, MATLAB, C++</li>
+								<li>Machine Learning for Sensor Data</li>
+							</ul>
+							<p>
+								<a href="Michael-Turner-Resume.pdf" class="button">Download Resume (PDF)</a>
 							</p>
 						</div>
 					</div>
 				</div>
-				</div>
 			</section>
-			<div class="ninjaDesk" w3-include-html="Resume-Mobile.html" style="padding:2%"></div>>
-
 
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
 					<ul class="icons">
 						<li><a href="https://twitter.com/EeMichaelturner" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-                                                <li><a href="https://www.facebook.com/TurnerTheRed" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                                                <li><a href="https://www.instagram.com/turnerthered/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-                                                <li><a href="mailto:webmaster@michael-turner.ee" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+						<li><a href="https://www.facebook.com/TurnerTheRed" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/turnerthered/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="mailto:webmaster@michael-turner.ee" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 					</ul>
 				</div>
 				<div class="copyright">
@@ -115,13 +111,6 @@ function includeHTML() {
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
-<script>
-includeHTML();
-</script>
