@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Truck Projects - Michael Turner</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N59452KPFK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N59452KPFK');
+  </script>
+</head>
+<body class="subpage">
+
+  <!-- Header -->
+  <header id="header">
+    <div class="logo"><a href="index.html">Michael Turner</a></div>
+    <a href="#menu">Menu</a>
+  </header>
+
+  <!-- Nav -->
+  <nav id="menu">
+    <ul class="links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Section -->
+  <section id="One" class="wrapper style3">
+    <div class="inner">
+      <header class="align-center">
+        <p>Real-world diagnostics</p>
+        <h2>Truck Projects</h2>
+      </header>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section id="carb-story" class="wrapper style2">
+    <div class="inner">
+      <div class="box">
+        <div class="content">
+          <header class="align-center">
+            <h2>The Booger That Broke the Beast</h2>
+            <p>Using instrumentation to drive the fix</p>
+          </header>
+
+          <!-- Video section -->
+          <div class="image fit">
+            <video autoplay muted loop playsinline controls style="width: 100%; border-radius: 0.5em;">
+              <source src="videos/Carb.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <br>
+
+          <!-- Story text -->
+          <p>
+            One day, my truck just… stopped pulling. It idled fine, but pressing the gas actually made it weaker. Something was definitely wrong with my engine
+          </p>
+          <p>
+            Fortunately, I’d installed a <strong>wideband O₂ sensor</strong>. The Air-Fuel ratio at idle was the same as always, but leaned out to 26:1+ as you pressed the pedal. Also, If you floor it, it only ran on a few cylinders but read 16:1 (14.7:1 is a normal reading)
+          </p>
+		  <p> 
+			Seems like the secondary jets are still operational, and the idle circuit is the only thing holding the engine up. This points to something clogging the main jet
+          <p>
+            I limped the truck home, either feathering the throttle or flooring it with no in-between, and tore into the carb. As I disassembled it, I found the culprit:
+          </p>
+
+          <!-- Inline image -->
+          <div class="image fit" style="max-width: 600px; margin: 0 auto;">
+            <img src="images/booger.jpeg" alt="Clogged jet debris" style="border-radius: 0.5em;">
+          </div>
+
+          <p>
+           I'm not sure what that is, but it shouldn't be in there!  After cleaning it out and reinstalling the carb it's pulling strong again! 
+          </p>
+          <p>
+            <strong>Lesson learned:</strong> Instrumentation is critical for data driven decisions. It’s the difference between panic and precision.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <ul class="icons">
+        <li><a href="https://twitter.com/EeMichaelturner" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="https://www.facebook.com/TurnerTheRed" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        <li><a href="https://www.instagram.com/turnerthered/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="mailto:webmaster@michael-turner.ee" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+      </ul>
+    </div>
+    <div class="copyright">
+      &copy; Michael Turner. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
