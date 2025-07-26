@@ -32,7 +32,7 @@ ser = serial.Serial(SERIAL_PORT, BAUDRATE, timeout=1)
 time.sleep(2)
 #ser.write("import Bench\r\n".encode())
 time.sleep(2)
-while True
+while True:
 # === Load and Process Punchcard ===
     with open(PUNCHCARD_FILE, "r") as infile, open(UPDATED_FILE, "w") as outfile:
         lines = list(infile)  # preload lines to enable index-based control
@@ -88,7 +88,7 @@ while True
                         "VSS_Hz": hz,
                         "Load": load,
                         "expected_gear": expected_gear,
-                        "measured_gear": measured_gear,
+                        "measured_gear": sol,
                         "total_points": total_points,
                         "complete_test_cycles": complete_test_cycles,
                         "errors_found": errors_found,
