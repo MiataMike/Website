@@ -65,5 +65,20 @@
       }
     }
   </script>
+  <script>
+  async function fetchStats() {
+    try {
+      const res = await fetch("/dashboard/meta_stats.json", { cache: "no-store" });
+      const json = await res.json();
+      document.getElementById("output").textContent = JSON.stringify(json, null, 2);
+    } catch (err) {
+      document.getElementById("output").textContent = "❌ Failed to load stats.";
+    }
+  }
+
+  // Call every 2 seconds
+  setInterval(fetchStats, 200);
+  fetchStats(); // Initial call on page load
+</script>
 </body>
 </html>

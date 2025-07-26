@@ -85,6 +85,10 @@ with open(PUNCHCARD_FILE, "r") as infile, open(UPDATED_FILE, "w") as outfile:
                 print("[{:05}] {}".format(index, json.dumps(entry)))
                 total_points = total_points + 1
                 stats = {
+                    "VSS_Hz": hz,
+                    "Load": load,
+                    "expected_gear": expected_gear,
+                    "measured_gear": measured_gear,
                     "total_points": total_points,
                     "complete_test_cycles": complete_test_cycles,
                     "errors_found": errors_found,
