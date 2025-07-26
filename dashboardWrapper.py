@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, APIRouter
 import subprocess
 import threading
 
@@ -9,7 +9,7 @@ router = APIRouter(prefix="/dashboard")
 def root():
     return {"status": "FastAPI server running"}
 
-@app.post("/run-benchtest")
+@app.get("/run-benchtest")
 def run_test():
     def target():
         subprocess.run(["python3", "BenchHost.py"])
