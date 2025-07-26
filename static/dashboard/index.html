@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Truck ASIC Testbench Dashboard</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #111;
+      color: #eee;
+      padding: 2rem;
+    }
+    button {
+      background-color: #00aa88;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    pre {
+      background: #222;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+    }
+    #status {
+      margin-top: 1rem;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Truck ASIC Testbench</h1>
+  <p>Click below to start the test and retrieve the latest output:</p>
+  <button onclick="runBenchTest()">🔧 Run Bench Test</button>
+  <div id="status"></div>
+  <h2>Latest Bench Test Output:</h2>
+  <pre id="output">No data yet.</pre>
+
+  <script>
+    async function runBenchTest() {
+      const status = document.getElementById("status");
+      const output = document.getElementById("output");
+      status.textContent = "⏳ Running bench test...";
+
+      try {
+        const res = await fetch("/dashboard/run-benchtest", {
+          method: "POST"
+        });
+        const result = await res.json();
+        status.textContent = "✅ " + result.msg;
+
+        // Fetch and show updated meta_stats.json
+        const meta = await fetch("/dashboard/meta_stats.json", { cache: "no-store" });
+        const json = await meta.json();
+        output.textContent = JSON.stringify(json, null, 2);
+
+      } catch (err) {
+        console.error(err);
+        status.textContent = "❌ Error running bench test.";
+        output.textContent = "Error fetching test output.";
+      }
+    }
+  </script>
+</body>
+</html>
