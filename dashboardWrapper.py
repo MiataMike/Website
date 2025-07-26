@@ -5,11 +5,11 @@ from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 router = APIRouter(prefix="/dashboard")
-app.mount("/dashboard", StaticFiles(directory="static/dashboard", html=True), name="dashboard")
+app.mount("/", StaticFiles(directory="static/dashboard", html=True), name="dashboard")
 
-@app.get("/")
-def root():
-    return {"status": "FastAPI server running"}
+#@app.get("/")
+#def root():
+#    return {"status": "FastAPI server running"}
 
 @router.post("/run-benchtest")
 def run_test():

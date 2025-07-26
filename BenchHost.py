@@ -16,7 +16,7 @@ complete_test_cycles=0
 errors_found = 0
 last_updated = time.time()
 
-SERIAL_PORT = "COM5"  # Adjust as needed
+SERIAL_PORT = "/dev/ttyACM0"  # Adjust as needed
 BAUDRATE = 115200
 
 # === Gear to Solenoid Lookup (4L60E encoding) ===
