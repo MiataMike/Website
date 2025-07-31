@@ -1,0 +1,13 @@
+Hello Kellogg Consumer Support Team,
+
+I recently purchased your new “Glazed is Genius” donut‑hole–shaped cereal and noticed what appears to be a mathematical error on mathematical proofs on the box. I’d love to clarify:
+
+The box states the Area of a ring is A=2(pi)^2Rr, while the correct answer is (2pi)^2Rr. This means the actual surface area of a toroid is 100% higher than calculated! This can be found by integrating the circumference of the cross section 2pir around a ring whose circumference is 2piR. This yields 2pir * 2piR, an elegant form of (2pi)^2Rr.   
+
+While the Froot Loop toroid topology concentrates glaze on a ring (which can be calibrated with R), other topologies such as a curved Chex-style lattice structure might offer pooling across the surface and more optimal glazing performance ratios. I thought your R&D team might find this geometry perspective useful.
+
+Please let me know if you’d like more detail or examples of glazing experiments, as I am available for consultation. 
+Thank you for publicly posting your findings, promoting peer review in the scientific community.
+
+Mostly Sincerely,
+Michael Turner
