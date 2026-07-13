@@ -1,0 +1,326 @@
+<!DOCTYPE HTML>
+<!--
+    Hielo by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license
+-->
+<html lang="en">
+<head>
+    <title>Solar Rack Energy System - Michael Turner</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A 48 V solar and battery system integrating Victron power electronics, Pylontech storage, CAN communications, Venus OS, and automatic load control." />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N59452KPFK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-N59452KPFK');
+    </script>
+
+    <!-- Small additions that preserve the existing Hielo layout -->
+    <style>
+        .breadcrumbs {
+            padding: 1.1em 0;
+            font-size: 0.95em;
+        }
+        .breadcrumbs a { border-bottom: 0; }
+        .breadcrumbs span { margin: 0 0.45em; opacity: 0.55; }
+        .project-actions { margin-top: 1.5em; }
+        .project-actions .button { margin: 0.25em; }
+        .schematic-caption {
+            margin-top: 0.8em;
+            text-align: center;
+            font-size: 0.9em;
+            opacity: 0.75;
+        }
+        .project-navigation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1em;
+            margin-top: 2em;
+        }
+        .project-navigation a { border-bottom: 0; }
+        @media screen and (max-width: 600px) {
+            .project-navigation { display: block; }
+            .project-navigation a { display: block; margin: 0.8em 0; }
+        }
+    </style>
+</head>
+<body class="subpage">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="logo"><a href="index.html">Michael Turner</a></div>
+        <a href="#menu">Menu</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="circuits.html">Design</a></li>
+            <li><a href="solarSystem.html">More Solar</a></li>
+            <li><a href="resume.html" class="resume-cta" data-cta-location="menu">Resume</a></li>
+        </ul>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <section class="wrapper style2" style="padding: 0;">
+        <div class="inner breadcrumbs" aria-label="Breadcrumb">
+            <a href="index.html">Home</a><span>&rsaquo;</span>
+            <a href="systems.html">Systems</a><span>&rsaquo;</span>
+            <a href="solar.html">Solar &amp; Energy</a><span>&rsaquo;</span>
+            <strong>Solar Rack</strong>
+        </div>
+    </section>
+
+    <!-- Main title, following the original project template -->
+    <section id="One" class="wrapper style3">
+        <div class="inner">
+            <header class="align-center">
+                <p>Power electronics, controls, and system integration</p>
+                <h2>48 V Solar Rack</h2>
+                <div class="project-actions">
+                    <a href="#architecture" class="button special scrolly">View System Architecture</a>
+                    <a href="resume.html" class="button resume-cta" data-cta-location="hero">View Resume</a>
+                </div>
+            </header>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section id="overview" class="wrapper style2">
+        <div class="inner">
+            <div class="box">
+                <div class="content">
+                    <header class="align-center">
+                        <h2>Project Overview</h2>
+                    </header>
+                    <p>
+                        I built this rack as a practical solar-energy platform for charging an electric motorcycle, and using the excess to power my home.
+                        The project combines high-current DC distribution, AC protection, lithium battery storage,
+                        embedded Linux, CAN communications, and system monitoring in one serviceable package.
+                    </p>
+                    <div class="image fit">
+                        <a href="images/rackOverview.jpg">
+                            <img src="images/rackOverview.jpg"
+                                 alt="Image of the whole system" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured schematic -->
+    <section id="architecture" class="wrapper style2">
+        <div class="inner">
+            <div class="box">
+                <div class="content">
+                    <header class="align-center">
+                        <p>Power, control, and communications</p>
+                        <h2>System Architecture</h2>
+                    </header>
+
+                    <p>
+                        This schematic shows the complete rack architecture: photovoltaic charge control, the 48 V
+                        battery stack, inverter and AC output, protected auxiliary power rails, and the communications
+                        links that make each major subsystem visible to Venus OS and Home Assistant.
+                    </p>
+
+                    <div class="image fit">
+                        <a href="images/HAL-system-schematic.png">
+                            <img src="images/HAL-system-schematic.png"
+                                 alt="Solar rack schematic showing two Victron 100/20 MPPT charge controllers, a Victron MultiPlus II inverter, four Pylontech US3000 batteries, Venus OS on a Raspberry Pi, CAN and UART communications, fuse boxes, breaker panel, EV charger, and low-voltage auxiliary loads." />
+                        </a>
+                    </div>
+                    <p class="schematic-caption">
+                        Click the schematic to open the full-resolution drawing.
+                    </p>
+
+                    <hr />
+
+                    <h3>Architecture Highlights</h3>
+                    <ul>
+                        <li>Four Pylontech US3000 modules form the 48 V energy-storage backbone.</li>
+                        <li>A Victron MultiPlus-II provides inverter, charger, and AC power-management functions.</li>
+                        <li>Two Victron SmartSolar 100/20 MPPTs independently manage the solar inputs.</li>
+                        <li>A Raspberry Pi 3B+ running Venus OS collects system data and coordinates communications.</li>
+                        <li>CAN links the Pylontech battery-management system to the monitoring stack.</li>
+                        <li>Dedicated 5 V and 12 V converters support compute, networking, and Home Assistant hardware.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design approach -->
+    <section id="design" class="wrapper style2">
+        <div class="inner">
+            <div class="box">
+                <div class="content">
+                    <header class="align-center">
+                        <h2>Design Approach</h2>
+                    </header>
+                    <h3>Star grounding</h3>
+                    <p>
+                        To eliminate ground loops and provide an excellent ground reference, the 1/4-20 lug connected to the
+                        rack rail is the main connection for: AC PE ground, MPPT ground, compute DC-DC converter ground, and Inverter DC negative. 
+                        This low resistance path allows for the removal of the UART cables' ground wires since the MPPTs are well grounded. 
+                        An internet search will show many Vicrton VE.direct users recommending an isolated UART adapter, but it is not necessary in this design.
+                    </p>
+
+                    <h3>Bring telemetry online before full power</h3>
+                    <p>
+                        I enabled battery communications and Venus OS monitoring early in commissioning. That allowed me
+                        to verify battery voltage, state of health, and read any faults to safely bring up the system. Venus OS
+                        allows the BMS to control the MPPT chargers, and stop when the SOC reaches 100%. There were no faults during bringup, 
+                        but being able to access and control the devices as a system ensured safety.
+                    </p>
+
+                    <h3>Keep protection and service points accessible</h3>
+                    <p>
+                        The fuse boxes and breaker panel are part of the visible architecture rather than afterthoughts.
+                        The rack is arranged so conductors remain protected while common test and service locations remain
+                        reachable during integration work. The built-in shelf and ergonomic heights make working on this system a pleasure.
+                        The MPPTs are mounted high so you can see into the terminals for easy installation, the Inverter is at a reasonable height to lift a 50lbs box,
+                        and the batteries are mounted low where it's easier to lift. Having access to the rear of the rack through the door makes working on the AC distribution easy.
+                        Compared to the tight packaging of a motorcycle, there's so much room to stretch out and be comfy!
+                    </p>
+                    <div class="image fit">
+                        <a href="images/rackClose.jpg">
+                            <img src="images/rackClose.jpg"
+                                 alt="Image of the rack, from the standing position" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Monitoring -->
+    <section id="monitoring" class="wrapper style2">
+        <div class="inner">
+            <div class="box">
+                <div class="content">
+                    <header class="align-center">
+                        <h2>Monitoring and Automation</h2>
+                    </header>
+                    <p>
+                        Venus OS runs on a Raspberry Pi 3B+ and serves as the rack's energy-system hub. The Pylontech
+                        batteries report over CAN, the MultiPlus-II connects through the Victron MK3 interface, and each
+                        SmartSolar controller reports through its UART connection. This creates one coherent view of
+                        battery state, charging power, inverter behavior, and system limits.
+                        VRM (Victron Remote Monitoring) is accessible via app or local network
+                    </p>
+                    <br>
+                    <p>
+                        Home Assistant runs separately on an Odroid N2. It can use the solar-system data to control
+                        discretionary loads, including charging and future energy-management routines, without placing
+                        general home automation directly in the safety-critical power-control layer.
+                        At 100% charge, a dehumidifier runs to dry the garage air (reducing corrosion) and makes water for the garden
+                    </p>
+                    <div class="align-center">
+                    	<div class="content">
+                    		<header class="align-center">
+                    			<p>Live system monitoring</p>
+                    			<h2>Solar Rack Status</h2>
+                    		</header>
+                    
+                    		<div class="vrm-desktop">
+                    			<iframe
+                    				src="https://vrm.victronenergy.com/installation/976977/embed/84a79ce3"
+                    				style="width:100%;max-width:900px;height:auto;min-height:360px;"
+                    				title="Solar Rack Status"
+                    				loading="lazy">
+                    			</iframe>
+
+                    			<p>The live dashboard works better in its full-screen mobile view.</p>
+                    			<a
+                    				href="https://vrm.victronenergy.com/installation/976977/embed/84a79ce3"
+                    				class="button special"
+                    				target="_blank"
+                    				rel="noopener">
+                    				Open Live Dashboard
+                    			</a>
+                    		</div>
+                    	</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / navigation -->
+    <section id="next" class="wrapper style3">
+        <div class="inner">
+            <header class="align-center">
+                <p>Continue exploring</p>
+                <h2>Systems Engineering in Practice</h2>
+                <p>
+                    This project brings together power electronics, embedded systems, communications, commissioning,
+                    and practical troubleshooting.
+                </p>
+                <div class="project-actions">
+                    <a href="resume.html" class="button special resume-cta" data-cta-location="final-cta">View My Resume</a>
+                    <a href="circuits.html" class="button">Browse Systems Projects</a>
+                </div>
+            </header>
+
+            <div class="project-navigation">
+                <a href="solarSystem.html">&larr; Solar &amp; Energy</a>
+                <a href="index.html">Return to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <ul class="icons">
+                <li><a href="https://twitter.com/EeMichaelturner" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="https://www.facebook.com/TurnerTheRed" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/turnerthered/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="mailto:webmaster@michael-turner.ee" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            &copy; Michael Turner. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Original site scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Track which CTA and source page sends visitors to the resume -->
+    <script>
+        (function () {
+            var links = document.querySelectorAll('.resume-cta');
+            Array.prototype.forEach.call(links, function (link) {
+                link.addEventListener('click', function () {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'resume_cta_click', {
+                            source_page: window.location.pathname,
+                            source_title: document.title,
+                            cta_location: link.getAttribute('data-cta-location') || 'unknown',
+                            link_url: link.href,
+                            transport_type: 'beacon'
+                        });
+                    }
+                });
+            });
+        }());
+    </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Truck ASIC — One‑Pager Overview</title>
+  <!-- Tailwind CDN (no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N59452KPFK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N59452KPFK');
+</script>
+  <!-- Lucide static icon font -->
+  <link rel="stylesheet" href="https://unpkg.com/lucide-static@latest/font/lucide.css">
+</head>
+<body class="w-full min-h-screen bg-gradient-to-br from-slate-950 via-[#0f172a] to-slate-900 text-slate-50">
+  <div class="mx-auto max-w-7xl px-6 py-8">
+    <!-- Header -->
+    <header class="mb-6">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-300 ring-1 ring-emerald-400/30">
+            <i class="lucide lucide-workflow h-3.5 w-3.5"></i>
+            One‑Pager Overview
+          </div>
+          <h1 class="mt-3 text-2xl md:text-3xl font-bold tracking-tight">Truck ASIC — FPGA‑Based 4L60E Transmission Controller</h1>
+          <p class="mt-1.5 max-w-3xl text-sm text-slate-300">
+            Objective → Result snapshots of the design: inputs, logic, safety, hardware, validation, and go‑to‑market fit.
+          </p>
+        </div>
+        <div class="text-right">
+          <div class="text-xs text-slate-400">Prepared</div>
+          <div class="text-sm font-medium">Aug 11, 2025</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Story chips -->
+    <section class="mb-6 flex flex-wrap items-center gap-2 text-xs">
+      <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-slate-200"><i class="lucide lucide-target"></i> Core Goal</span>
+      <i class="lucide lucide-chevron-right h-4 w-4 text-slate-500"></i>
+      <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-slate-200"><i class="lucide lucide-gauge"></i> Inputs</span>
+      <i class="lucide lucide-chevron-right h-4 w-4 text-slate-500"></i>
+      <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-slate-200"><i class="lucide lucide-git-branch"></i> State Machine</span>
+      <i class="lucide lucide-chevron-right h-4 w-4 text-slate-500"></i>
+      <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-slate-200"><i class="lucide lucide-shield-check"></i> Safety</span>
+      <i class="lucide lucide-chevron-right h-4 w-4 text-slate-500"></i>
+      <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-slate-200"><i class="lucide lucide-wrench"></i> Hardware</span>
+      <i class="lucide lucide-chevron-right h-4 w-4 text-slate-500"></i>
+      <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-slate-200"><i class="lucide lucide-bar-chart-3"></i> Testing</span>
+      <i class="lucide lucide-chevron-right h-4 w-4 text-slate-500"></i>
+      <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-slate-200"><i class="lucide lucide-network"></i> Comms</span>
+      <i class="lucide lucide-chevron-right h-4 w-4 text-slate-500"></i>
+      <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-slate-200"><i class="lucide lucide-rocket"></i> Product Fit</span>
+    </section>
+
+    <!-- Cards -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Core Goal -->
+      <div class="relative rounded-2xl bg-white/5 ring-1 ring-white/10 p-5">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 p-2 rounded-xl bg-white/10 ring-1 ring-white/15"><i class="lucide lucide-target"></i></div>
+          <div>
+            <h3 class="text-base font-semibold">Core Goal</h3>
+            <div class="mt-3 grid grid-cols-[auto,1fr] gap-x-2 gap-y-1 text-sm text-slate-200">
+              <span class="text-slate-400">Objective</span><span>Deliver a safe, reliable, and repairable controller for classic swaps and retrofits.</span>
+              <span class="text-slate-400">Result</span><span>FPGA‑centric architecture with LUT‑driven shift logic and modular, serviceable I/O.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MVP Inputs -->
+      <div class="relative rounded-2xl bg-white/5 ring-1 ring-white/10 p-5">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 p-2 rounded-xl bg-white/10 ring-1 ring-white/15"><i class="lucide lucide-gauge"></i></div>
+          <div>
+            <h3 class="text-base font-semibold">MVP Inputs</h3>
+            <div class="mt-3 grid grid-cols-[auto,1fr] gap-x-2 gap-y-1 text-sm text-slate-200">
+              <span class="text-slate-400">Objective</span><span>Minimize complexity while enabling functional shifting in prototypes.</span>
+              <span class="text-slate-400">Result</span><span>Primary sensors: MAP via SPI/I2C and VSS (≈40 pulses/shaft rev). RPM input path identified for over‑rev protection.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- State Machine & Tables -->
+      <div class="relative rounded-2xl bg-white/5 ring-1 ring-white/10 p-5">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 p-2 rounded-xl bg-white/10 ring-1 ring-white/15"><i class="lucide lucide-git-branch"></i></div>
+          <div>
+            <h3 class="text-base font-semibold">State Machine &amp; Tables</h3>
+            <div class="mt-3 grid grid-cols-[auto,1fr] gap-x-2 gap-y-1 text-sm text-slate-200">
+              <span class="text-slate-400">Objective</span><span>Create deterministic, tunable gear selection.</span>
+              <span class="text-slate-400">Result</span><span>256×256 gear map (0.5 mph bins × 0–100 load) with upshift/downshift/lockup/override LUTs; automated .hex build from .npy.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Safety Systems -->
+      <div class="relative rounded-2xl bg-white/5 ring-1 ring-white/10 p-5">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 p-2 rounded-xl bg-white/10 ring-1 ring-white/15"><i class="lucide lucide-shield-check"></i></div>
+          <div>
+            <h3 class="text-base font-semibold">Safety Systems</h3>
+            <div class="mt-3 grid grid-cols-[auto,1fr] gap-x-2 gap-y-1 text-sm text-slate-200">
+              <span class="text-slate-400">Objective</span><span>Prevent destructive or unsafe shifts under abnormal conditions.</span>
+              <span class="text-slate-400">Result</span><span>Independent‑clock watchdog; RPM‑based downshift lockout; VSS delta/unplug detection; zero‑speed shift inhibit; manual paperclip reset.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hardware Interface & Protection -->
+      <div class="relative rounded-2xl bg-white/5 ring-1 ring-white/10 p-5">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 p-2 rounded-xl bg-white/10 ring-1 ring-white/15"><i class="lucide lucide-wrench"></i></div>
+          <div>
+            <h3 class="text-base font-semibold">Hardware Interface &amp; Protection</h3>
+            <div class="mt-3 grid grid-cols-[auto,1fr] gap-x-2 gap-y-1 text-sm text-slate-200">
+              <span class="text-slate-400">Objective</span><span>Survive automotive electrical abuse and be field‑repairable.</span>
+              <span class="text-slate-400">Result</span><span>TVS on power/VSS/tach; protected digital bus for MAP; replaceable I/O submodules; harness‑friendly pinout.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testing & Validation -->
+      <div class="relative rounded-2xl bg-white/5 ring-1 ring-white/10 p-5">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 p-2 rounded-xl bg-white/10 ring-1 ring-white/15"><i class="lucide lucide-bar-chart-3"></i></div>
+          <div>
+            <h3 class="text-base font-semibold">Testing &amp; Validation</h3>
+            <div class="mt-3 grid grid-cols-[auto,1fr] gap-x-2 gap-y-1 text-sm text-slate-200">
+              <span class="text-slate-400">Objective</span><span>Prove logic robustly before road testing.</span>
+              <span class="text-slate-400">Result</span><span>Dual Pico2‑ICE (driver/DUT) with synthetic sweeps and bench host; &gt;2M automated test points exercised to date. (51 complete scans)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data & Debug Tooling -->
+      <div class="relative rounded-2xl bg-white/5 ring-1 ring-white/10 p-5">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 p-2 rounded-xl bg-white/10 ring-1 ring-white/15"><i class="lucide lucide-cpu"></i></div>
+          <div>
+            <h3 class="text-base font-semibold">Data &amp; Debug Tooling</h3>
+            <div class="mt-3 grid grid-cols-[auto,1fr] gap-x-2 gap-y-1 text-sm text-slate-200">
+              <span class="text-slate-400">Objective</span><span>Surface logic mismatches quickly and visually.</span>
+              <span class="text-slate-400">Result</span><span>JSONL logs parsed to 256×256 inspectors and mismatch heatmaps; Python pipeline for .npy→.hex generation.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comms Robustness -->
+      <div class="relative rounded-2xl bg-white/5 ring-1 ring-white/10 p-5">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 p-2 rounded-xl bg-white/10 ring-1 ring-white/15"><i class="lucide lucide-network"></i></div>
+          <div>
+            <h3 class="text-base font-semibold">Comms Robustness</h3>
+            <div class="mt-3 grid grid-cols-[auto,1fr] gap-x-2 gap-y-1 text-sm text-slate-200">
+              <span class="text-slate-400">Objective</span><span>Eliminate serial and framing‑related faults.</span>
+              <span class="text-slate-400">Result</span><span>Host‑side buffering and firmware input sanitation in place; framed protocol with checksum/CRC designed and staged for integration.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Strategy -->
+      <div class="relative rounded-2xl bg-white/5 ring-1 ring-white/10 p-5">
+        <div class="flex items-start gap-3">
+          <div class="shrink-0 p-2 rounded-xl bg-white/10 ring-1 ring-white/15"><i class="lucide lucide-rocket"></i></div>
+          <div>
+            <h3 class="text-base font-semibold">Product Strategy</h3>
+            <div class="mt-3 grid grid-cols-[auto,1fr] gap-x-2 gap-y-1 text-sm text-slate-200">
+              <span class="text-slate-400">Objective</span><span>Ship something people can trust—and fix.</span>
+              <span class="text-slate-400">Result</span><span>Repairable architecture; web portal for feature requests; focus on C10 retrofit niche; roadmap to CAN‑out and Sport Mode.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap & Status -->
+    <section class="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-5">
+        <h3 class="text-base font-semibold mb-2 flex items-center gap-2"><i class="lucide lucide-workflow"></i> Roadmap — Next Up</h3>
+        <ul class="text-sm leading-6 text-slate-200 list-disc list-inside space-y-1">
+          <li>Integrate RPM input on bench &amp; road; finalize over‑rev guards.</li>
+          <li>Finalize CRC/framing and command parser hardening.</li>
+          <li>Add explicit <code>SHIFT_IN_PROGRESS</code> state &amp; lockout logic.</li>
+          <li>Tune torque‑converter lockup strategy.</li>
+          <li>Harness adapter &amp; in‑vehicle shakedown.</li>
+          <li>Phase 2: CAN output; configurable Sport Mode.</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl bg-white/5 ring-1 ring-white/10 p-5 lg:col-span-2">
+        <h3 class="text-base font-semibold mb-2 flex items-center gap-2"><i class="lucide lucide-activity"></i> Status &amp; Impact</h3>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-slate-200"><i class="lucide lucide-bar-chart-3"></i> 2,043,537+ auto test points</span>
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-slate-200"><i class="lucide lucide-git-branch"></i> 256×256 map tooling ready</span>
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-slate-200"><i class="lucide lucide-shield-check"></i> Watchdog &amp; guards prototyped</span>
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-slate-200"><i class="lucide lucide-cpu"></i> Error heatmaps operational</span>
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-slate-200"><i class="lucide lucide-network"></i> CRC protocol: design staged</span>
+          <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-slate-200"><i class="lucide lucide-wrench"></i> Repairable I/O approach</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-6 flex items-center justify-between text-[11px] text-slate-400">
+      <div>BitShyft • FPGA‑based 4L60E Controller</div>
+      <div>non-Confidential • For Publication</div>
+    </footer>
+  </div>
+</body>
+</html>
