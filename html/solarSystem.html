@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<!--
+    Hielo by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+    <head>
+        <title>Solar Power System - Michael Turner</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-N59452KPFK"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-N59452KPFK');
+        </script>
+    </head>
+    <body class="subpage">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="logo"><a href="index.html">Michael Turner</a></div>
+            <a href="#menu">Menu</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="circuits.html">Design</a></li>
+                <li><a href="solarRack.html">More Solar</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero -->
+        <section id="One" class="wrapper style3">
+            <div class="inner">
+                <header class="align-center">
+                    <p>Mobile Energy Infrastructure</p>
+                    <h2>Solar Power System</h2>
+                </header>
+            </div>
+        </section>
+
+        <!-- Intro / Project Overview -->
+        <section id="overview" class="wrapper style2">
+            <div class="inner">
+                <div class="box">
+                    <div class="content">
+                        <header class="align-center">
+                            <h2>Overview</h2>
+                        </header>
+                        <div class="image fit">
+                            <!-- Replace with best installed system photo -->
+                            <img src="images/realPanel.png" alt="Installed solar power system overview" />
+                        </div>
+                        <p>
+                            The goal was to build a mobile, self-sufficient energy platform. This control panel automatically harvests and distributes power throughout the 3-source, 3-battery system. 
+                        </p>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real vs Model -->
+        <section id="real-vs-model" class="wrapper style2">
+            <div class="inner">
+                <div class="box">
+                    <div class="content">
+                        <header class="align-center">
+                            <h2>Designed → Built → Verified</h2>
+                            <p class="special">Real hardware paired with the design intent behind it</p>
+                        </header>
+                        <div class="gallery">
+                            <div>
+                                <h3 style="text-align: center; margin-bottom: 0px;">Model / CAD / Layout</h3>
+                                <div class="image fit">
+                                    <!-- Replace with model, CAD, or wiring layout image -->
+                                    <a href="images/cadPanel.png"><img src="images/cadPanel.png" alt="Solar system model or CAD" /></a>
+                                </div>
+                                <p>
+                                    I designed the electrical modules and enclosure in Fusion360
+                                </p>
+                            </div>
+                            <div>
+                                <h3 style="text-align: center; margin-bottom: 0px;">Real Build</h3>
+                                <div class="image fit">
+                                    <!-- Replace with corresponding real-world image -->
+                                    <a href="images/realPanel.png"><img src="images/realPanel.png" alt="Real solar system build" /></a>
+                                </div>
+                                <p>
+                                    The final product was hand sanded from MDF to match the C10's interior styling
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub / Open Source -->
+        <section id="github" class="wrapper style2">
+            <div class="inner">
+                <div class="box">
+                    <div class="content align-center">
+                        <header class="align-center">
+                            <h2>Open Source Project</h2>
+                        </header>
+                        <p>
+                            The information needed for the modules is documented with board files, F360 schematics, and implementation details.
+                        </p>
+                        <p>
+                            <a href="https://github.com/MiataMike/Powerhubmod" class="button alt">View the GitHub Repository</a>
+                        </p>
+                        <p>
+                            <!-- Optional: add one sentence about what a visitor will find there -->
+                            Reach out if you need any support with the modules!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Lessons Learned -->
+        <section id="lessons" class="wrapper style2">
+            <div class="inner">
+                <div class="box">
+                    <div class="content">
+                        <header class="align-center">
+                            <h2>Lessons Learned</h2>
+                        </header>
+                        <p>
+                            Making it work can take much less time than making it pretty. I know of a handful of ways I could make it look even cleaner, but knowing when to stop is also important!
+                        </p>
+                        <p>
+                            5-month update! This system has quietly done its job, keeping the batteries charged. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Work -->
+        <section id="future-work" class="wrapper style2">
+            <div class="inner">
+                <div class="box">
+                    <div class="content">
+                        <header class="align-center">
+                            <h2>Future Work</h2>
+                        </header>
+                        <p>
+                          I’ve been using a slightly better setup manually, and it could probably be automated with a single sense wire.
+                          When the portable panels are deployed and charging, I turn Aux Branch off so battery power doesn’t feed back 
+                          into that circuit and interfere with the panels. Instead, I switch Alt Charge on and send that energy to the starter battery.
+                          This way, I can charge at 200W AND 60W instead of 200W OR 60W
+                         </p>
+                         <p>
+                          The system could detect when the panels are active by monitoring their voltage and switch modes automatically.
+                          For now, though, the added complexity and failure risk don’t seem worth it compared with having an experienced operator handle the changeover.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <ul class="icons">
+                    <li><a href="https://twitter.com/EeMichaelturner" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://www.facebook.com/TurnerTheRed" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://www.instagram.com/turnerthered/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="mailto:webmaster@michael-turner.ee" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                &copy; Michael Turner. All rights reserved.
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+</html>

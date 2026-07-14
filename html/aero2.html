@@ -6,11 +6,10 @@
 -->
 <html>
 	<head>
-		<title>Michael Turner</title>
+		<title>Aero v2</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N59452KPFK"></script>
 <script>
@@ -42,14 +41,14 @@
 			<section id="One" class="wrapper style3">
 				<div class="inner">
 					<header class="align-center">
-						<p>Intelligent Optical System</p>
-						<h2>Apollo</h2>
+						<p>no compromises</p>
+						<h2>Active Aerodynamics</h2>
 					</header>
 				</div>
 			</section>
 
 		<!-- Two -->
-			<section id="two" class="wrapper style2">
+			<section id="wing" class="wrapper style2">
 				<div class="inner">
 					<div class="box">
 						<div class="content">
@@ -57,64 +56,81 @@
 								<h2>Overview</h2>
 							</header>
 							<div class="image fit">
-                                <a href="images/FirstSteps.jpg"><img src="images/Apollo.jpg"></img></a>
-								<br>
-								<p>
-									As the lead electrical engineer at Intelligent Optical Systems, I developed a cutting-edge sensor system that uses a solid-state photomultiplier to detect small changes in light. This technology acts like a precise low-light, high-speed camera, capable of sensing things that traditional sensors cannot.
-								</p><p>
-The system features 8 identical slots that can be configured to match any set of measurements needed. By changing the inexpensive optical film on the tip, a different reading can be taken, making the system flexible and versatile. Furthermore, the unique properties of optical sensing, such as EMF immunity and the ability to pass through transparent materials, allow for sensing in previously impossible ways.
-								</p><p>
+								<img src="images/wing.jpg"></img>	
+								<hr>
+								<p> This project combined both high downforce with low drag to give us an aero package that wouldn't drain our pack. 
+								In a 16 lap race, we save an entire lap's worth of energy by using low-drag on the straights where cornering grip
+								isn't needed</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-During the development process, I encountered a packaging challenge, which I overcame by taking inspiration from past designs I have studied. I created a motherboard and card type system that slides into an extrusion for easy assembly and reconfiguration. This innovative approach made the system streamlined, compact, and easy to use.
-								</p><p>
-
-Overall, this intelligent optical system represents a significant technological breakthrough in sensor technology. As the lead developer of the project, I am proud to have played a central role in its development and excited to see how it will revolutionize many industries.
-								</p><p>
-
-									See more at the official site: <a href = "https://intopsys.com/ios-apollo/">https://intopsys.com/ios-apollo/</a>
+			<section id="electronics" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<h2>Electronics</h2>								
+							
+							</header>
+							<div class="image fit">
+								<img src="images/aeroBoard.jpg"></img>
+								<hr>
+								<p> I built the position controller for the motor from scratch using an ARM cortex M4 processor controlling a
+									TI H-bridge driver while reading position feedback from a PWM absolute rotary encoder. The code was written in C,
+									and features a PID loop for position control. The motor board interfaces with the control system over CAN, where 
+									a paddle is pulled to activate the DRS system.
+								</p> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section id="mechanism" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<h2>The Mechanism</h2>
+							</header>
+							<div class="image fit">
+							<img src="images/mechanism.gif"></img>
+							<hr>
+								<p> The mechanism is based on the classic 4-bar (thanks Dr. Hutcheson!). Both elements are driven by the middle rocker.
+								I wrote a Python simulation/optimizer to calculate the forces, and designed the mechanism to minimize driving force. Part of the
+								clever design is that the forces from the airfoils cancel to make <b>both</b> operating points stable! 
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!--
-			<section id="three" class="wrapper style2">
+			
+			<section id="rockers" class="wrapper style2">
 				<div class="inner">
-					<header class="align-center">
-						<p class="special">Here are some pretty pictures of it</p>
-						<h2>Gallery</h2>
-					</header>
-					<div class="gallery">
-						<div>
+					<div class="box">
+						<div class="content">
+							<header class="align-center">
+								<h2>The Rockers</h2>
+							</header>
+							<br>
 							<div class="image fit">
-								<a href="images/FirstSteps.jpg"><img src="images/FirstStepsSm.jpg" alt="" /></a>
-							</div>
-						</div>
-						<div>
-							<div class="image fit">
-								<a href="images/solarMockup.jpg"><img src="images/solarMockupSm.jpg" alt="" /></a>
-							</div>
-						</div>
-						<div>
-							<div class="image fit">
-								<a href="images/solarDatalog.jpg"><img src="images/solarDatalogSm.jpg" alt="" /></a>
-							</div>
-						</div>
-						<div>
-							<div class="image fit">
-								<a href="images/solarUI.jpg"><img src="images/solarUISm.jpg" alt="" /></a>
+								<img src="images/RockerFEA.PNG"></img>
+								<hr>
+								<p> The rockers have a cool, alien look because they were developed using topology optimization. I have
+								learned how to use ANSYS FEA software, and this takes the design to the next level by iteratively removing unstressed 
+								material in the design space. The end result is a structure 70% of the weight and over twice as strong!
+								</p>
+
 							</div>
 						</div>
 					</div>
-					<div>
-						<div class="align-center">
-							<p>To see more, check out my <a href="https://www.instagram.com/turnerthered/">Instagram</a></p>
-					</div>	
 				</div>
 			</section>
-			-->
-			
+
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">

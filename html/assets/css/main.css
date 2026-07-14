@@ -4318,3 +4318,32 @@
 {
 	.ninjaDesk{display:none;}
 }
+.vrm-desktop {
+	width: 100%;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.vrm-desktop iframe {
+	display: block;
+	width: 100% !important;
+	height: 700px !important;
+	min-height: 360px !important;
+	margin: 0;
+	border: 0;
+}
+
+.vrm-mobile {
+	display: none;
+}
+
+@media screen and (max-width: 736px) {
+	.vrm-desktop {
+		display: none;
+	}
+
+	.vrm-mobile {
+		display: block;
+	}
+}
