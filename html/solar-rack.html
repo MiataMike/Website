@@ -119,17 +119,20 @@
             box-shadow: 0 1px 0 rgba(255,255,255,0.45);
             pointer-events: none;
         }
-        .solar-odometer-decimal {
-            display: grid;
-            place-items: end center;
-            width: 0.34em;
-            height: 1.35em;
-            padding-bottom: 0.08em;
-            color: #2d2923;
-            font-size: clamp(2.5rem, 8vw, 4.8rem);
-            font-weight: 700;
-            line-height: 1;
-        }
+		.solar-odometer-decimal {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			align-self: center;
+			width: 0.34em;
+			height: 1.35em;
+			padding: 0;
+			transform: translateY(0.08em);
+			color: #2d2923;
+			font-size: clamp(2.5rem, 8vw, 4.8rem);
+			font-weight: 700;
+			line-height: 1;
+		}
         .solar-counter-label {
             margin-top: 0.9rem;
             color: #6b645b;
