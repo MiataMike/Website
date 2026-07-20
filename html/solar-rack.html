@@ -486,7 +486,7 @@
 
             function renderSolarCounter(value) {
                 var number = Math.min(9999.9, Math.max(0, Number(value) || 0));
-                var formatted = number.toFixed(1).padStart(6, '0');
+                var formatted = number.toFixed(2).padStart(7, '0');
                 var pieces = formatted.split('').map(function (character) {
                     var element = document.createElement('span');
 
@@ -504,7 +504,7 @@
                 odometer.replaceChildren.apply(odometer, pieces);
                 odometer.setAttribute(
                     'aria-label',
-                    number.toFixed(1) + ' kilowatt-hours captured'
+                    number.toFixed(2) + ' kilowatt-hours captured'
                 );
             }
 
@@ -544,7 +544,7 @@
 
             renderSolarCounter(0);
             loadSolarCounter();
-            window.setInterval(loadSolarCounter, 60000);
+            window.setInterval(loadSolarCounter, 10000);
         }());
     </script>
 
